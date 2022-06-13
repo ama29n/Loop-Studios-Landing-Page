@@ -1,0 +1,418 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    font-size: 10px;
+}
+
+.main {
+    /* overflow-x: hidden; */
+    max-width: 1550px;
+    margin: 0px auto;
+}
+ 
+/* ............................................................................................................. */
+
+/* width */
+::-webkit-scrollbar {
+    width: 17px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black; 
+    border-left: 2px solid white;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+/* ............................................................................................................. */
+
+.firstBox {
+    height: 80vh;
+    width: 100%;
+    /* background-image: url("imageHero.jpg"); */
+    background-image: url("lens.jpg");
+    background-color: grey;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    width: 80%;
+    margin: 0rem auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.logo {
+    font-size: 5rem;
+    margin-right: auto;
+    margin-left: 3rem;
+    color: white;
+    text-decoration: none;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+}
+
+.li a {
+    font-size: 1.75rem;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 1rem;
+}
+
+.li a::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    background-color: white;
+    margin: 0.7rem auto;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in;
+}
+
+.header a:hover::after {
+    transform: scaleX(1);
+}
+
+@media screen and (max-width : 950px) {
+    * {
+        font-size: 8px;
+    }
+
+    .content p {
+        margin-top: 5rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width : 765px) {
+    .header ul {
+        display: none;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 0px auto;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    * {
+        font-size: 6px;
+    }
+
+    .firstBox {
+        height: 60vh;
+    }
+}
+
+/* ............................................................................................................. */
+
+.content {
+    width: 80%;
+    margin: 6rem auto 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content p {
+    color: white;
+    font-size: 6rem;
+    width: 17ch;
+    border: 2px solid white;
+    font-weight: 700;
+    padding: 2rem;
+}
+
+/* ............................................................................................................. */
+
+.secondBox {
+    width: 80%;
+    margin: 5rem auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.secondBox h1 {
+    text-align: center;
+    font-size: 7rem;
+    width: 17ch;
+}
+
+.secondBox p {
+    text-align: center;
+    font-size: 2rem;
+    width: 80ch;
+}
+
+.secondBox-img {
+    margin: 2rem 0px 4rem;
+}
+
+.secondBox-img img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width : 765px) {
+    .secondBox p {
+        width: 60ch;
+    }
+}
+
+/* ............................................................................................................. */
+
+.thirdBox-box {
+    background-color: black;
+    padding-top: 6rem;
+}
+
+.thirdBox {
+    width: 80%;
+    margin: 0rem auto;
+}
+
+.thirdBox-header {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thirdBox-header h1 {
+    font-size: 4rem;
+    margin-right: auto;
+    color: white;
+}
+
+.thirdBox-header a{
+    border: 2px solid white;
+    background-color: white;
+    padding: 0.7rem 1.9rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    z-index: 1;
+}
+
+.thirdBox-header a:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transition: transform 700ms linear 2ms;
+    transform-origin: right;
+}
+
+
+.thirdBox-header a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.thirdBox-header a:hover {
+    color: white;
+}
+
+.thirdBox-images {
+    padding: 2 rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.imgDiv {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 6rem;
+    position: relative;
+}
+
+
+.imgDiv img {
+    width: 100%;
+    height: auto;
+    box-shadow: 2px 2px 140px rgb(48, 47, 47);
+    filter: opacity(1); 
+    transition: filter 250ms ease-in-out;
+}
+
+.imgDiv img:hover {
+    filter: opacity(0.5);
+}
+
+.imgDiv p {
+    color: white;
+    font-size: 1.7rem;
+    position: absolute;
+    bottom: 3.5rem;
+    left: 6.5rem;
+    transform: scaleX(0);
+    transition: transform 1s ease-in-out;
+}
+
+.enterP {
+    transform: scaleX(1);
+}
+
+.gap {
+    width: 100%;
+    height: 12rem;
+    background-color: black;
+}
+
+@media screen and (max-width : 765px) {
+    .thirdBox-images {
+        justify-content: space-around;
+    }    
+}
+
+/* ............................................................................................................. */
+
+.footer {
+    padding: 2rem 2rem 8rem;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-box1 {
+    color: black;
+    margin-left: 8rem;
+}
+
+.footer-box1 h1 {
+    font-size: 5rem;
+}
+
+.footer-box1 ul {
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    margin-top: 2rem;
+}
+
+.footer-box1 ul li {
+    padding: 1rem;
+}
+
+.footer-box1 a {
+    font-size: 1.75rem;
+    color: black;
+    text-decoration: none;
+}
+
+.footer-box1 a::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    background-color: black;
+    margin: 0.7rem auto 0;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in;
+}
+
+.footer-box1 a:hover::after {
+    transform: scaleX(1);
+}
+
+.footer-box2 {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 8rem;
+}
+
+.footer-box2 ul {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+}
+
+.footer-box2 li {
+    padding: 2rem 1rem;
+}
+
+.footer-box2 li img {
+    width: 3.7rem;
+}
+
+.footer-box2 p {
+    margin-top: 0.85rem;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width : 780px) {
+    .footer-box1 ul {
+        flex-direction: column;
+    }
+
+    .footer-box1 li {
+        padding: 1rem 1rem;
+        text-align: center;
+    }
+
+    .footer-box1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-box2 {
+        justify-content: center;
+        align-items: flex-end;
+    }
+}
+
+@media screen and (max-width : 520px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-box1 {
+        margin-left: 0rem;
+    }
+
+    .footer-box2 {
+        margin-left: 0rem;
+        margin-right: 0rem;
+        align-items: center;
+    }
+}
+
+/* ............................................................................................................. */
