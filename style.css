@@ -40,7 +40,7 @@
     height: 80vh;
     width: 100%;
     /* background-image: url("imageHero.jpg"); */
-    background-image: url("lens.jpg");
+    background-image: url("./Assets/lens.jpg");
     background-color: grey;
     background-blend-mode: multiply;
     background-repeat: no-repeat;

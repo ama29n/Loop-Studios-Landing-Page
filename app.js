@@ -1,4 +1,4 @@
-let imgArray = ["image-curiosity.jpg", "image-deep-earth.jpg", "image-fisheye.jpg", "image-from-above.jpg", "image-grid.jpg", "image-night-arcade.jpg", "image-pocket-borealis.jpg", "image-soccer-team.jpg"];
+let imgArray = ["./Assets/image-curiosity.jpg", "./Assets/image-deep-earth.jpg", "./Assets/image-fisheye.jpg", "./Assets/image-from-above.jpg", "./Assets/image-grid.jpg", "./Assets/image-night-arcade.jpg", "./Assets/image-pocket-borealis.jpg", "./Assets/image-soccer-team.jpg"];
 let pArray = ["THE CURIOSITY", "DEEP EARTH", "MAKE IT FISHEYE", "FROM UP ABOVE VR", "THE GRID", "NIGHT ARCADE", "POCKET BOREALIS", "SOCCER TEAM VR"];
 
 function addImages() {
